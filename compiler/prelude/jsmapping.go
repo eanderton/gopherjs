@@ -242,7 +242,7 @@ var $internalize = function(v, t, recv) {
     if (t.methods.length !== 0) {
       $panic(new $String("cannot internalize " + t.string));
     }
-    if (v === null) {
+    if (v === null || v === undefined) {
       return $ifaceNil;
     }
     switch (v.constructor) {
